@@ -1,5 +1,5 @@
 ---
-title: Arm64 Reset
+title: Arm64 Reset Exit
 description: Learn about context data for an Arm64 exit caused by a virtual processor reset request.
 author: pbarbuda
 ms.author: pbarbuda
@@ -7,8 +7,7 @@ ms.date: 06/08/2026
 ms.topic: reference
 ---
 
-# Arm64 Reset
-
+# Arm64 Reset Exit
 Context data for an Arm64 exit caused by a virtual processor reset request.
 
 > [!NOTE]

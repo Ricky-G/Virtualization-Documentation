@@ -1,5 +1,5 @@
 ---
-title: CPUID Access
+title: CPUID Access Exit
 description: Learn about context data for an exit caused by a CPUID call.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# CPUID Access
-
+# CPUID Access Exit
 Context data for an exit caused by a CPUID call.
 
 > [!NOTE]

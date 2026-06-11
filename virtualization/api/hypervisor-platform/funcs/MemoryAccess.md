@@ -1,5 +1,5 @@
 ---
-title: Memory Access
+title: Memory Access Exit
 description: Learn about context data for a VM exit caused by a memory access.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# Memory Access
-
+# Memory Access Exit
 Context data for a VM exit caused by a memory access.
 
 ## Syntax

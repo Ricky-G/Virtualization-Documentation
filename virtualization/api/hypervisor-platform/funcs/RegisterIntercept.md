@@ -1,5 +1,5 @@
 ---
-title: Register Intercept
+title: Register Intercept Exit
 description: Learn about context data for an Arm64 exit caused by an intercepted register access.
 author: pbarbuda
 ms.author: pbarbuda
@@ -7,8 +7,7 @@ ms.date: 06/08/2026
 ms.topic: reference
 ---
 
-# Register Intercept
-
+# Register Intercept Exit
 Context data for an Arm64 exit caused by an intercepted register access.
 
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: I/O Port Access
+title: I/O Port Access Exit
 description: Learn about context data for an exit caused by an I/O port access.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# I/O Port Access
-
+# I/O Port Access Exit
 Context data for an exit caused by an I/O port access.
 
 > [!NOTE]

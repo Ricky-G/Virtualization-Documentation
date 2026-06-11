@@ -1,5 +1,5 @@
 ---
-title: Execution Canceled
+title: Execution Canceled Exit
 description: Learn about context data for an exit caused by a cancellation from the host.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# Execution Canceled
-
+# Execution Canceled Exit
 Context data for an exit caused by a cancellation from the host.
 
 ## Syntax

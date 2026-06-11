@@ -1,5 +1,5 @@
 ---
-title: Interrupt Window
+title: Interrupt Window Exit
 description: Learn about context data for an exit that occurs when the interruptibility state of a virtual processor allows delivery of an interrupt.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# Interrupt Window
-
+# Interrupt Window Exit
 Context data for an exit that occurs when the interruptibility state of a virtual processor allows delivery of an interrupt.
 
 > [!NOTE]

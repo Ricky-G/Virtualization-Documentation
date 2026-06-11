@@ -1,5 +1,5 @@
 ---
-title: Unsupported Feature
+title: Unsupported Feature Exit
 description: Learn about context data for an exit caused by an unsupported processor feature.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# Unsupported Feature
-
+# Unsupported Feature Exit
 Context data for an exit caused by an unsupported processor feature.
 
 > [!NOTE]

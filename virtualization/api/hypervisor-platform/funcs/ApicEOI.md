@@ -1,5 +1,5 @@
 ---
-title: APIC EOI
+title: APIC EOI Exit
 description: Learn about context data for an exit caused by an APIC EOI of a level-triggered interrupt.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# APIC EOI
-
+# APIC EOI Exit
 Context data for an exit caused by an APIC EOI of a level-triggered interrupt.
 
 > [!NOTE]

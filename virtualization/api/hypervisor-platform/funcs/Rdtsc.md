@@ -1,5 +1,5 @@
 ---
-title: RDTSC(P)
+title: RDTSC(P) Exit
 description: Learn about context data for an exit caused by an rdtsc(p) instruction.
 author: sethmanheim
 ms.author: roharwoo
@@ -7,8 +7,7 @@ ms.date: 04/20/2022
 ms.topic: reference
 ---
 
-# RDTSC(P)
-
+# RDTSC(P) Exit
 Context data for an exit caused by an rdtsc(p) instruction.
 
 > [!NOTE]
