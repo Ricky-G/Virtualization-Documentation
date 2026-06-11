@@ -1,16 +1,19 @@
 ---
 title: WHvGetVirtualProcessorCounters
-description: Description on parameters and return value for the WHvGetVirtualProcessorCounters, which includes a code snippet for syntax reference. 
+description: Learn about the WHvGetVirtualProcessorCounters function that retrieves performance counters for a virtual processor.
 author: jstarks
 ms.author: jostarks
 ms.date: 06/06/2019
+ms.topic: reference
 ---
 
 # WHvGetVirtualProcessorCounters
 
+Retrieves performance counters for a virtual processor.
+
 ## Syntax
 
-```
+```C
 HRESULT
 WINAPI
 WHvGetVirtualProcessorCounters(
@@ -99,10 +102,29 @@ Specifies `Buffer`'s size in bytes.
 
 `BytesWritten`
 
-If non-NULL, specifies a pointer that will be updated with the size of the counter set in bytes.
+If non-NULL, receives the size of the counter set in bytes.
 
-### Return Value
+## Return Value
 
-If the operation completed successfully, the return value is `S_OK`.
+If the function succeeds, the return value is `S_OK`.
 
 If an unrecognized value was passed for `CounterSet`, the return value is `WHV_E_UNKNOWN_PROPERTY`.
+
+## Remarks
+
+The `WHvGetVirtualProcessorCounters` function retrieves the requested set of performance counters for the specified virtual processor into the provided buffer.
+
+## Requirements
+
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1809 (x64); Windows 11, version 24H2, build 26100.3915 (Arm64) |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64, Arm64 |
+
+## See also
+
+- [`WHvGetPartitionCounters`](WHvGetPartitionCounters.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)

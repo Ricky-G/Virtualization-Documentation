@@ -1,12 +1,15 @@
 ---
 title: WHvResumePartitionTime
-description: Description on working with WHvResumePartitionTime and understanding its parameters, return value, remarks, and requirements. 
+description: Learn about the WHvResumePartitionTime function that resumes the passage of time for a suspended partition.
 author: sethmanheim
 ms.author: roharwoo
 ms.date: 03/15/2019
+ms.topic: reference
 ---
 
 # WHvResumePartitionTime
+
+Resumes the passage of time for a suspended partition.
 
 ## Syntax
 
@@ -26,12 +29,24 @@ Handle to the partition object.
 
 ## Return Value
 
-If the function succeeds, the return value is `S_OK`.  
+If the function succeeds, the return value is `S_OK`.
 
 ## Remarks
 
-Resumes time for a partition suspended by [`WHvSuspendPartitionTime`](WHvSuspendPartitionTime.md).
+The `WHvResumePartitionTime` function resumes time for a partition suspended by [`WHvSuspendPartitionTime`](WHvSuspendPartitionTime.md).
 
 ## Requirements
 
-Minimum supported build:    Insider Preview Builds (19H1)
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1903 (x64); Windows 11, version 24H2, build 26100.3915 (Arm64) |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64, Arm64 |
+
+## See also
+
+- [`WHvSuspendPartitionTime`](WHvSuspendPartitionTime.md)
+- [`WHvRunVirtualProcessor`](WHvRunVirtualProcessor.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)

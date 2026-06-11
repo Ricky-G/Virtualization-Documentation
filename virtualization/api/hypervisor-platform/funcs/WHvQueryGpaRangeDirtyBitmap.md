@@ -1,16 +1,19 @@
 ---
 title: WHvQueryGpaRangeDirtyBitmap
-description: Description for understanding parameters, return value and remarks when working with WHvQueryGpaRangeDirtyBitmap
+description: Learn about the WHvQueryGpaRangeDirtyBitmap function that queries the dirty page bitmap for a range of guest physical addresses.
 author: jstarks
 ms.author: jostarks
 ms.date: 06/06/2019
+ms.topic: reference
 ---
 
 # WHvQueryGpaRangeDirtyBitmap
 
+Queries the dirty page bitmap for a range of guest physical addresses.
+
 ## Syntax
 
-```
+```C
 HRESULT
 WINAPI
 WHvQueryGpaRangeDirtyBitmap(
@@ -30,11 +33,11 @@ Specifies the partition to query.
 
 `GuestAddress`
 
-Specifies the guest physical address, in bytes, of the beginning of the range to query. This address must be page-aligned.
+Specifies the guest physical address of the beginning of the range to query. This address must be page-aligned.
 
 `RangeSizeInBytes`
 
-Specifes the size of the range to query, in bytes.
+Specifies the size of the range to query, in bytes.
 
 `Bitmap`
 
@@ -54,4 +57,21 @@ If the specified address range has not been mapped or has not been registered fo
 
 ## Remarks
 
-To use this function for a given address range, that address range must be mapped with [WHvMapGpaRange](WHvMapGpaRange.md), specifying the `WHvMapGpaRangeFlagTrackDirtyPages` flag.
+To use this function for a given address range, that address range must be mapped with [`WHvMapGpaRange`](WHvMapGpaRange.md), specifying the `WHvMapGpaRangeFlagTrackDirtyPages` flag.
+
+## Requirements
+
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1809 (x64); Windows 11, version 24H2, build 26100.3915 (Arm64) |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64, Arm64 |
+
+## See also
+
+- [`WHvMapGpaRange`](WHvMapGpaRange.md)
+- [`WHvUnmapGpaRange`](WHvUnmapGpaRange.md)
+- [`WHvTranslateGva`](WHvTranslateGva.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)

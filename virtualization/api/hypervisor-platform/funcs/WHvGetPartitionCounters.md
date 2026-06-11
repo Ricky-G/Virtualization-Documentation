@@ -1,17 +1,19 @@
 ---
 title: WHvGetPartitionCounters
-description:  Description on partition counters and its properties, including a code sample for syntax and specific parameters and return value. 
+description: Learn about the WHvGetPartitionCounters function that retrieves partition-wide performance counters for a partition.
 author: jstarks
 ms.author: jostarks
 ms.date: 06/06/2019
-
+ms.topic: reference
 ---
 
 # WHvGetPartitionCounters
 
+Retrieves partition-wide performance counters for a partition.
+
 ## Syntax
 
-```
+```C
 typedef enum WHV_PARTITION_COUNTER_SET
 {
     WHvPartitionCounterSetMemory,
@@ -57,8 +59,27 @@ Specifies `Buffer`'s size in bytes.
 
 If non-NULL, specifies a pointer that will be updated with the size of the counter set in bytes.
 
-### Return Value
+## Return Value
 
-If the operation completed successfully, the return value is `S_OK`.
+If the function succeeds, the return value is `S_OK`.
 
 If an unrecognized value was passed for `CounterSet`, the return value is `WHV_E_UNKNOWN_PROPERTY`.
+
+## Remarks
+
+The `WHvGetPartitionCounters` function retrieves the requested set of partition-wide performance counters into the provided buffer.
+
+## Requirements
+
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1809 (x64); Windows 11, version 24H2, build 26100.3915 (Arm64) |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64, Arm64 |
+
+## See also
+
+- [`WHvGetVirtualProcessorCounters`](WHvGetVirtualProcessorCounters.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)

@@ -1,13 +1,15 @@
 ---
 title: WHvRunVirtualProcessor
-description: Working with and understanding paremeters, syntax, remarks, and requirements for WHvRunVirtualProcessor
+description: Learn about the WHvRunVirtualProcessor function that runs a virtual processor in a partition.
 author: Juarezhm
 ms.author: hajuarez
 ms.date: 05/31/2019
+ms.topic: reference
 ---
 
 # WHvRunVirtualProcessor
 
+Runs a virtual processor in a partition, enabling it to execute guest code.
 
 ## Syntax
 
@@ -31,6 +33,7 @@ typedef enum WHV_RUN_VP_EXIT_REASON
     WHvRunVpExitReasonX64MsrAccess           = 0x00001000,
     WHvRunVpExitReasonX64Cpuid               = 0x00001001,
     WHvRunVpExitReasonException              = 0x00001002,
+    WHvRunVpExitReasonX64Rdtsc               = 0x00001003,
 
     // Exits caused by the host
     WHvRunVpExitReasonCanceled               = 0x00002001
@@ -72,26 +75,40 @@ WHvRunVirtualProcessor(
 
 `Partition`
 
-Handle to the partition object
+Handle to the partition object.
 
 `VpIndex`
 
-Specifies the index of the virtual processor that is executed
+Specifies the index of the virtual processor that is executed.
 
 `ExitContext`
 
-Specifies the output buffer that receives the context structure providing the information about the reason that caused the `WHvRunVirtualProcessor` function to return. 
+Specifies the output buffer that receives the context structure providing the information about the reason that caused the `WHvRunVirtualProcessor` function to return.
 
 `ExitContextSizeInBytes`
 
-Specifies the size of the buffer that receives the exit context, in bytes. 
-  
+Specifies the size of the buffer that receives the exit context, in bytes.
+
+## Return Value
+
+If the function succeeds, the return value is `S_OK`.
 
 ## Remarks
 
-A virtual processor is executed (i.e., is enabled to run guest code) by making a call to the `WHvRunVirtualProcessor` function. A call to this function blocks synchronously until either the virtual processor executed an operation that needs to be handled by the virtualization stack (e.g., accessed memory in the GPA space that is not mapped or not accessible) or the virtualization stack explicitly request an exit of the function (e.g., to inject an interrupt for the virtual processor or to change the state of the VM). 
+A virtual processor is run (that is, enabled to execute guest code) by calling the `WHvRunVirtualProcessor` function. The call blocks synchronously until either the virtual processor performs an operation that the virtualization stack must handle (for example, accessing memory in the GPA space that is not mapped or not accessible) or the virtualization stack explicitly requests an exit of the function (for example, to inject an interrupt for the virtual processor or to change the state of the VM).
 
 ## Requirements
 
-Minimum supported build:    Insider Preview Builds (19H2) Experimental:
-`ReadTsc`
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1803 (x64); Windows 11, version 24H2, build 26100.3915 (Arm64) |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64, Arm64 |
+
+## See also
+
+- [`WHvCancelRunVirtualProcessor`](WHvCancelRunVirtualProcessor.md)
+- [Exit Context Data Types](WHvExitContextDataTypes.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)
