@@ -1,16 +1,25 @@
 ---
 title: WHvGetVirtualProcessorXsaveState
-description: Description on working with WHvGetVirtualProcessorXsaveState, including parameters, syntax, and return value.
+description: Learn about the WHvGetVirtualProcessorXsaveState function that retrieves the XSAVE state of a virtual processor.
 author: jstarks
 ms.author: jostarks
 ms.date: 06/06/2019
+ms.topic: reference
 ---
 
 # WHvGetVirtualProcessorXsaveState
 
+Retrieves the XSAVE state of a virtual processor.
+
+> [!IMPORTANT]
+> `WHvGetVirtualProcessorXsaveState` is deprecated. Use [`WHvGetVirtualProcessorState`](WHvGetVirtualProcessorState.md) with the `WHvVirtualProcessorStateTypeXsaveState` state type instead.
+
+> [!NOTE]
+> This function applies to x64 partitions only.
+
 ## Syntax
 
-```
+```C
 HRESULT
 WINAPI
 WHvGetVirtualProcessorXsaveState(
@@ -49,3 +58,22 @@ Receives the number of bytes written to the buffer.
 If the function succeeds, the return value is `S_OK`.
 
 If the buffer is not large enough, the return value is `WHV_E_INSUFFICIENT_BUFFER`. In this case, `BytesWritten` receives the required buffer size.
+
+## Remarks
+
+The `WHvGetVirtualProcessorXsaveState` function retrieves the XSAVE state of the specified virtual processor.
+
+## Requirements
+
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1809 |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64 |
+
+## See also
+
+- [`WHvSetVirtualProcessorXsaveState`](WHvSetVirtualProcessorXsaveState.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)

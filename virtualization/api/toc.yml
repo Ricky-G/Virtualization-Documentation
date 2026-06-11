@@ -388,91 +388,187 @@ items:
 - name: Windows Hypervisor Platform API
   href: ./hypervisor-platform/hypervisor-platform.md
   items:
-    - name: Windows Hypervisor Platform Headers
+    - name: Windows Hypervisor Platform API Headers
       href: ./hypervisor-platform/whp-headers.md
-    - name: Windows Hypervisor Platform Samples
+    - name: Windows Hypervisor Platform API Samples
       href: ./hypervisor-platform/whp-samples.md
-    - name: WHvCancelRunVirtualProcessor
-      href: ./hypervisor-platform/funcs/WHvCancelRunVirtualProcessor.md
-    - name: WHvCreatePartition
-      href: ./hypervisor-platform/funcs/WHvCreatePartition.md
-    - name: WHvCreateVirtualProcessor
-      href: ./hypervisor-platform/funcs/WHvCreateVirtualProcessor.md
-    - name: WHvDeletePartition
-      href: ./hypervisor-platform/funcs/WHvDeletePartition.md
-    - name: WHvDeleteVirtualProcessor
-      href: ./hypervisor-platform/funcs/WHvDeleteVirtualProcessor.md
-    - name: WHvGetCapability
-      href: ./hypervisor-platform/funcs/WHvGetCapability.md
-    - name: WHvGetPartitionCounters
-      href: ./hypervisor-platform/funcs/WHvGetPartitionCounters.md
-    - name: WHvGetPartitionProperty
-      href: ./hypervisor-platform/funcs/WHvGetPartitionProperty.md
+    - name: Data Types
       items:
-        - name: Data Types
-          href: ./hypervisor-platform/funcs/WHvPartitionPropertyDataTypes.md
-    - name: WHvGetVirtualProcessorCounters
-      href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorCounters.md
-    - name: WHvGetVirtualProcessorInterruptControllerState
-      href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorInterruptControllerState.md
-    - name: WHvGetVirtualProcessorRegisters
-      href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorRegisters.md
-      items:
-        - name: Data Types
-          href: ./hypervisor-platform/funcs/WHvVirtualProcessorDataTypes.md
-    - name: WHvGetVirtualProcessorXSaveState
-      href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorXSaveState.md
-    - name: WHvMapGpaRange
-      href: ./hypervisor-platform/funcs/WHvMapGpaRange.md
-    - name: WHvQueryGpaRangeDirtyBitmap
-      href: ./hypervisor-platform/funcs/WHvQueryGpaRangeDirtyBitmap.md
-    - name: WHvRequestInterrupt
-      href: ./hypervisor-platform/funcs/WHvRequestInterrupt.md
-    - name: WHvResumePartitionTime
-      href: ./hypervisor-platform/funcs/WHvResumePartitionTime.md
-    - name: WHvRunVirtualProcessor
-      href: ./hypervisor-platform/funcs/WHvRunVirtualProcessor.md
-      items:
-        - name: Exit Contexts
+        - name: Doorbell Data Types
+          href: ./hypervisor-platform/funcs/WHvDoorbellDataTypes.md
+        - name: Exit Context Data Types
           href: ./hypervisor-platform/funcs/WHvExitContextDataTypes.md
-        - name: Memory Access
-          href: ./hypervisor-platform/funcs/MemoryAccess.md
-        - name: I/O Port Access
-          href: ./hypervisor-platform/funcs/IOPortAccess.md
-        - name: MSR Access
-          href: ./hypervisor-platform/funcs/MSRAccess.md
-        - name: CPUID Access
-          href: ./hypervisor-platform/funcs/CPUIDAccess.md
-        - name: Virtual Processor Exception
-          href: ./hypervisor-platform/funcs/VirtualProcessorException.md
-        - name: Interrupt Window
-          href: ./hypervisor-platform/funcs/InterruptWindow.md
-        - name: Unsupported Feature
-          href: ./hypervisor-platform/funcs/UnsupportableFeature.md
-        - name: Execution Cancelled
-          href: ./hypervisor-platform/funcs/ExecutionCancelled.md
-    - name: WHvSetPartitionProperty
-      href: ./hypervisor-platform/funcs/WHvSetPartitionProperty.md
-      items:
-        - name: Data Types
+        - name: Memory Data Types
+          href: ./hypervisor-platform/funcs/WHvMemoryDataTypes.md
+        - name: Notification Port Data Types
+          href: ./hypervisor-platform/funcs/WHvNotificationPortDataTypes.md
+        - name: Partition Property Data Types
           href: ./hypervisor-platform/funcs/WHvPartitionPropertyDataTypes.md
-    - name: WHvSetupPartition
-      href: ./hypervisor-platform/funcs/WHvSetupPartition.md
-    - name: WHvSetVirtualProcessorInterruptControllerState
-      href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorInterruptControllerState.md
-    - name: WHvSetVirtualProcessorRegisters
-      href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorRegisters.md
-      items:
-        - name: Data Types
+        - name: Trigger Data Types
+          href: ./hypervisor-platform/funcs/WHvTriggerDataTypes.md
+        - name: Virtual Processor Register Names and Values
           href: ./hypervisor-platform/funcs/WHvVirtualProcessorDataTypes.md
-    - name: WHvSetVirtualProcessorXSaveState
-      href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorXSaveState.md
-    - name: WHvSuspendPartitionTime
-      href: ./hypervisor-platform/funcs/WHvSuspendPartitionTime.md
-    - name: WHvTranslateGva
-      href: ./hypervisor-platform/funcs/WHvTranslateGva.md
-    - name: WHvUnmapGpaRange
-      href: ./hypervisor-platform/funcs/WHvUnmapGpaRange.md
+        - name: Virtual PCI Data Types
+          href: ./hypervisor-platform/funcs/WHvVpciDataTypes.md
+    - name: Functions
+      items:
+        - name: WHvAcceptPartitionMigration
+          href: ./hypervisor-platform/funcs/WHvAcceptPartitionMigration.md
+        - name: WHvAdviseGpaRange
+          href: ./hypervisor-platform/funcs/WHvAdviseGpaRange.md
+        - name: WHvAllocateVpciResource
+          href: ./hypervisor-platform/funcs/WHvAllocateVpciResource.md
+        - name: WHvCancelPartitionMigration
+          href: ./hypervisor-platform/funcs/WHvCancelPartitionMigration.md
+        - name: WHvCancelRunVirtualProcessor
+          href: ./hypervisor-platform/funcs/WHvCancelRunVirtualProcessor.md
+        - name: WHvCompletePartitionMigration
+          href: ./hypervisor-platform/funcs/WHvCompletePartitionMigration.md
+        - name: WHvCreateNotificationPort
+          href: ./hypervisor-platform/funcs/WHvCreateNotificationPort.md
+        - name: WHvCreatePartition
+          href: ./hypervisor-platform/funcs/WHvCreatePartition.md
+        - name: WHvCreateTrigger
+          href: ./hypervisor-platform/funcs/WHvCreateTrigger.md
+        - name: WHvCreateVirtualProcessor
+          href: ./hypervisor-platform/funcs/WHvCreateVirtualProcessor.md
+        - name: WHvCreateVirtualProcessor2
+          href: ./hypervisor-platform/funcs/WHvCreateVirtualProcessor2.md
+        - name: WHvCreateVpciDevice
+          href: ./hypervisor-platform/funcs/WHvCreateVpciDevice.md
+        - name: WHvDeleteNotificationPort
+          href: ./hypervisor-platform/funcs/WHvDeleteNotificationPort.md
+        - name: WHvDeletePartition
+          href: ./hypervisor-platform/funcs/WHvDeletePartition.md
+        - name: WHvDeleteTrigger
+          href: ./hypervisor-platform/funcs/WHvDeleteTrigger.md
+        - name: WHvDeleteVirtualProcessor
+          href: ./hypervisor-platform/funcs/WHvDeleteVirtualProcessor.md
+        - name: WHvDeleteVpciDevice
+          href: ./hypervisor-platform/funcs/WHvDeleteVpciDevice.md
+        - name: WHvGetCapability
+          href: ./hypervisor-platform/funcs/WHvGetCapability.md
+        - name: WHvGetInterruptTargetVpSet
+          href: ./hypervisor-platform/funcs/WHvGetInterruptTargetVpSet.md
+        - name: WHvGetPartitionCounters
+          href: ./hypervisor-platform/funcs/WHvGetPartitionCounters.md
+        - name: WHvGetPartitionProperty
+          href: ./hypervisor-platform/funcs/WHvGetPartitionProperty.md
+        - name: WHvGetVirtualProcessorCounters
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorCounters.md
+        - name: WHvGetVirtualProcessorCpuidOutput
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorCpuidOutput.md
+        - name: WHvGetVirtualProcessorInterruptControllerState
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorInterruptControllerState.md
+        - name: WHvGetVirtualProcessorInterruptControllerState2
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorInterruptControllerState2.md
+        - name: WHvGetVirtualProcessorRegisters
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorRegisters.md
+        - name: WHvGetVirtualProcessorState
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorState.md
+        - name: WHvGetVirtualProcessorXsaveState
+          href: ./hypervisor-platform/funcs/WHvGetVirtualProcessorXsaveState.md
+        - name: WHvGetVpciDeviceInterruptTarget
+          href: ./hypervisor-platform/funcs/WHvGetVpciDeviceInterruptTarget.md
+        - name: WHvGetVpciDeviceNotification
+          href: ./hypervisor-platform/funcs/WHvGetVpciDeviceNotification.md
+        - name: WHvGetVpciDeviceProperty
+          href: ./hypervisor-platform/funcs/WHvGetVpciDeviceProperty.md
+        - name: WHvMapGpaRange
+          href: ./hypervisor-platform/funcs/WHvMapGpaRange.md
+        - name: WHvMapGpaRange2
+          href: ./hypervisor-platform/funcs/WHvMapGpaRange2.md
+        - name: WHvMapVpciDeviceInterrupt
+          href: ./hypervisor-platform/funcs/WHvMapVpciDeviceInterrupt.md
+        - name: WHvMapVpciDeviceMmioRanges
+          href: ./hypervisor-platform/funcs/WHvMapVpciDeviceMmioRanges.md
+        - name: WHvPostVirtualProcessorSynicMessage
+          href: ./hypervisor-platform/funcs/WHvPostVirtualProcessorSynicMessage.md
+        - name: WHvQueryGpaRangeDirtyBitmap
+          href: ./hypervisor-platform/funcs/WHvQueryGpaRangeDirtyBitmap.md
+        - name: WHvReadGpaRange
+          href: ./hypervisor-platform/funcs/WHvReadGpaRange.md
+        - name: WHvReadVpciDeviceRegister
+          href: ./hypervisor-platform/funcs/WHvReadVpciDeviceRegister.md
+        - name: WHvRegisterPartitionDoorbellEvent
+          href: ./hypervisor-platform/funcs/WHvRegisterPartitionDoorbellEvent.md
+        - name: WHvRequestInterrupt
+          href: ./hypervisor-platform/funcs/WHvRequestInterrupt.md
+        - name: WHvRequestVpciDeviceInterrupt
+          href: ./hypervisor-platform/funcs/WHvRequestVpciDeviceInterrupt.md
+        - name: WHvResetPartition
+          href: ./hypervisor-platform/funcs/WHvResetPartition.md
+        - name: WHvResumePartitionTime
+          href: ./hypervisor-platform/funcs/WHvResumePartitionTime.md
+        - name: WHvRetargetVpciDeviceInterrupt
+          href: ./hypervisor-platform/funcs/WHvRetargetVpciDeviceInterrupt.md
+        - name: WHvRunVirtualProcessor
+          href: ./hypervisor-platform/funcs/WHvRunVirtualProcessor.md
+          items:
+            - name: Memory Access Exit
+              href: ./hypervisor-platform/funcs/MemoryAccess.md
+            - name: I/O Port Access Exit
+              href: ./hypervisor-platform/funcs/IOPortAccess.md
+            - name: MSR Access Exit
+              href: ./hypervisor-platform/funcs/MSRAccess.md
+            - name: CPUID Access Exit
+              href: ./hypervisor-platform/funcs/CPUIDAccess.md
+            - name: Virtual Processor Exception Exit
+              href: ./hypervisor-platform/funcs/VirtualProcessorException.md
+            - name: Interrupt Window Exit
+              href: ./hypervisor-platform/funcs/InterruptWindow.md
+            - name: Unsupported Feature Exit
+              href: ./hypervisor-platform/funcs/UnsupportableFeature.md
+            - name: Execution Canceled Exit
+              href: ./hypervisor-platform/funcs/ExecutionCancelled.md
+            - name: RDTSC(P) Exit
+              href: ./hypervisor-platform/funcs/Rdtsc.md
+            - name: APIC EOI Exit
+              href: ./hypervisor-platform/funcs/ApicEOI.md
+            - name: Register Intercept Exit
+              href: ./hypervisor-platform/funcs/RegisterIntercept.md
+            - name: Arm64 Reset Exit
+              href: ./hypervisor-platform/funcs/Arm64Reset.md
+        - name: WHvSetNotificationPortProperty
+          href: ./hypervisor-platform/funcs/WHvSetNotificationPortProperty.md
+        - name: WHvSetPartitionProperty
+          href: ./hypervisor-platform/funcs/WHvSetPartitionProperty.md
+        - name: WHvSetVirtualProcessorInterruptControllerState
+          href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorInterruptControllerState.md
+        - name: WHvSetVirtualProcessorInterruptControllerState2
+          href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorInterruptControllerState2.md
+        - name: WHvSetVirtualProcessorRegisters
+          href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorRegisters.md
+        - name: WHvSetVirtualProcessorState
+          href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorState.md
+        - name: WHvSetVirtualProcessorXsaveState
+          href: ./hypervisor-platform/funcs/WHvSetVirtualProcessorXsaveState.md
+        - name: WHvSetVpciDevicePowerState
+          href: ./hypervisor-platform/funcs/WHvSetVpciDevicePowerState.md
+        - name: WHvSetupPartition
+          href: ./hypervisor-platform/funcs/WHvSetupPartition.md
+        - name: WHvSignalVirtualProcessorSynicEvent
+          href: ./hypervisor-platform/funcs/WHvSignalVirtualProcessorSynicEvent.md
+        - name: WHvStartPartitionMigration
+          href: ./hypervisor-platform/funcs/WHvStartPartitionMigration.md
+        - name: WHvSuspendPartitionTime
+          href: ./hypervisor-platform/funcs/WHvSuspendPartitionTime.md
+        - name: WHvTranslateGva
+          href: ./hypervisor-platform/funcs/WHvTranslateGva.md
+        - name: WHvUnmapGpaRange
+          href: ./hypervisor-platform/funcs/WHvUnmapGpaRange.md
+        - name: WHvUnmapVpciDeviceInterrupt
+          href: ./hypervisor-platform/funcs/WHvUnmapVpciDeviceInterrupt.md
+        - name: WHvUnmapVpciDeviceMmioRanges
+          href: ./hypervisor-platform/funcs/WHvUnmapVpciDeviceMmioRanges.md
+        - name: WHvUnregisterPartitionDoorbellEvent
+          href: ./hypervisor-platform/funcs/WHvUnregisterPartitionDoorbellEvent.md
+        - name: WHvUpdateTriggerParameters
+          href: ./hypervisor-platform/funcs/WHvUpdateTriggerParameters.md
+        - name: WHvWriteGpaRange
+          href: ./hypervisor-platform/funcs/WHvWriteGpaRange.md
+        - name: WHvWriteVpciDeviceRegister
+          href: ./hypervisor-platform/funcs/WHvWriteVpciDeviceRegister.md
 - name: Virtualization Related Tools
   expanded: true
   items:

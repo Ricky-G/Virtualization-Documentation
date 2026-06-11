@@ -1,13 +1,17 @@
 ---
-title: Exit caused by an I/O port access
+title: I/O Port Access Exit
 description: Learn about context data for an exit caused by an I/O port access.
 author: sethmanheim
 ms.author: roharwoo
 ms.date: 04/20/2022
+ms.topic: reference
 ---
 
-# I/O Port Access
+# I/O Port Access Exit
+Context data for an exit caused by an I/O port access.
 
+> [!NOTE]
+> This exit reason and its context structure apply to x64 partitions only.
 
 ## Syntax
 ```C
@@ -32,11 +36,13 @@ typedef struct WHV_X64_IO_PORT_ACCESS_CONTEXT
 {
     // Context of the virtual processor
     UINT8 InstructionByteCount;
+    UINT8 Reserved[3];
     UINT8 InstructionBytes[16];
 
     // I/O port access info
     WHV_X64_IO_PORT_ACCESS_INFO AccessInfo;
     UINT16 PortNumber;
+    UINT16 Reserved2[3];
     UINT64 Rax;
     UINT64 Rcx;
     UINT64 Rsi;
@@ -46,6 +52,11 @@ typedef struct WHV_X64_IO_PORT_ACCESS_CONTEXT
 } WHV_X64_IO_PORT_ACCESS_CONTEXT;
 ```
 
-## Return Value
+## Remarks
 
-Information about exits caused by the virtual processor executing an I/O port instruction (IN, OUT, INS, and OUTS) is provided in the `WHV_X64_IO_PORT_ACCESS_CONTEXT` structure. The context information includes the I/O port address, which allows the virtualization stack to forward the exit to the device emulation logic of the device that uses the I/O port accessed by the virtual processor. 
+Information about exits caused by the virtual processor executing an I/O port instruction (IN, OUT, INS, and OUTS) is provided in the `WHV_X64_IO_PORT_ACCESS_CONTEXT` structure. The context information includes the I/O port address, which allows the virtualization stack to forward the exit to the device emulation logic of the device that uses the I/O port accessed by the virtual processor.
+
+## See also
+
+- [`WHvRunVirtualProcessor`](WHvRunVirtualProcessor.md)
+- [Exit Contexts](WHvExitContextDataTypes.md)

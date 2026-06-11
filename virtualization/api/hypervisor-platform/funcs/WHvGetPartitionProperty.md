@@ -1,13 +1,15 @@
 ---
 title: WHvGetPartitionProperty
-description: Explains different parameters and the return value for the GetPartitionProperty, including a syntax sample. 
-author: Juarezhm 
+description: Learn about the WHvGetPartitionProperty function that queries the value of a partition property.
+author: Juarezhm
 ms.author: hajuarez
 ms.date: 07/18/2018
+ms.topic: reference
 ---
 
 # WHvGetPartitionProperty
 
+Queries the value of a partition property.
 
 ## Syntax
 ```C
@@ -21,6 +23,7 @@ WHvGetPartitionProperty(
     _Out_opt_ UINT32 *WrittenSizeInBytes
     );
 ```
+
 ### Parameters
 
 `Partition`
@@ -44,6 +47,27 @@ Specifies the size of the output buffer, in bytes. For the currently available s
 Receives the written size in bytes of the `PropertyBuffer`.
 
 ## Return Value
-If the operation completed successfully, the return value is `S_OK`.
 
-The function returns `WHV_E_UNKNOWN_PROPERTY` if an unknown `PropertyCode` is requested or `ERROR_NOT_SUPPORTED` when called with an unsupported property code.
+If the function succeeds, the return value is `S_OK`.
+
+The function returns `WHV_E_UNKNOWN_PROPERTY` if an unknown `PropertyCode` is requested or `HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)` when called with an unsupported property code.
+
+## Remarks
+
+The `WHvGetPartitionProperty` function queries the value of a partition property.
+
+## Requirements
+
+| Requirement | Value |
+|---|---|
+| Minimum supported Windows | Windows 10, version 1803 (x64); Windows 11, version 24H2, build 26100.3915 (Arm64) |
+| Header | WinHvPlatform.h |
+| Library | WinHvPlatform.lib |
+| DLL | WinHvPlatform.dll |
+| Architecture | x64, Arm64 |
+
+## See also
+
+- [`WHvSetPartitionProperty`](WHvSetPartitionProperty.md)
+- [Partition Property Data Types](WHvPartitionPropertyDataTypes.md)
+- [Windows Hypervisor Platform API Definitions](../hypervisor-platform.md)
